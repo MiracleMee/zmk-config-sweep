@@ -44,8 +44,8 @@
         //          | tab enter || spc  bspc |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J &kp DE_L &kp DE_U &kp DE_Z &kp DE_
-        &kp DE_A    &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M &kp DE_N &kp DE_E &kp DE_I &kp DE_O
+        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J &kp DE_L &kp DE_U     &kp DE_Z      &kp DE_
+        &kp DE_A    &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M &kp DE_N &kp DE_E     &kp DE_I      &kp DE_O
         &kp DE_Y    &kp DE_X    &kp DE_C     &kp DE_D &kp DE_V    &kp DE_K &kp DE_H &kp DE_COMMA &kp DE_PERIOD &kp DE_SLASH
         &lt 3 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
             >;
@@ -80,9 +80,9 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp ESCAPE     &kp LC(Y)    &kp LC(Z)       &kp LC(S)   &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &kp LEFT_SHIFT &kp LC(A)    &kp LC(C)       &kp LC(V)   &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
-        &trans         &trans       &trans          &trans      &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
+        &kp ESCAPE     &trans    &trans       &trans   &trans        &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+        &kp LEFT_SHIFT &trans    &trans      &trans   &trans        &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        &trans         &trans       &trans          &trans      &trans        &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
         &trans         &trans       &trans          &trans
             >;
         };
@@ -98,9 +98,9 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
         
-        &sys_reset  &trans     &trans     &trans        &bt BT_SEL 0    &bt BT_SEL 3    &trans     &trans     &trans    &sys_reset
-        &bootloader &trans     &trans     &trans        &bt BT_SEL 1    &bt BT_SEL 4    &trans     &trans     &trans    &bootloader
-        &trans      &trans     &trans     &bt BT_CLR    &bt BT_SEL 2    &trans          &trans     &trans     &trans    &trans
+        &sys_reset  &trans     &trans     &trans        &bt BT_SEL 0          &bt BT_SEL 3    &trans     &trans     &trans    &sys_reset
+        &bootloader &trans     &trans     &trans        &bt BT_SEL 1          &bt BT_SEL 4    &trans     &trans     &trans    &bootloader
+        &trans      &trans     &trans     &bt BT_CLR    &bt BT_SEL 2          &trans          &trans     &trans     &trans    &trans
             >;
         };
     };
