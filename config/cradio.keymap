@@ -80,10 +80,10 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-           &trans &trans &trans &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+           &kp ESCAPE &kp LEFT_CONTROL(DE_Y) &kp LEFT_CONTROL(DE_Z) &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-           &trans &trans &trans &trans &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+           &kp LEFT_SHIFT &kp LEFT_CONTROL(DE_S) &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
            &trans &trans &trans &trans &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
@@ -94,7 +94,7 @@
         };
 
         //&kp ESCAPE &kp LEFT_CONTROL(DE_Y) &kp LEFT_CONTROL(DE_Z) &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        //&kp LEFT_SHIFT &trans &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        //&kp LEFT_SHIFT &kp LEFT_CONTROL(DE_S) &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         //&trans &trans &trans &trans &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
 
         tri_layer {
@@ -108,23 +108,6 @@
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-        };
-
-        combo_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │          │          │          │          │
-           &trans      &trans     &trans     &trans    &trans         &trans     &trans     &trans     &trans    &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-           &kp LEFT_GUI(1)&kp LEFT_GUI(2)&kp LEFT_GUI(3)&kp LEFT_GUI(4) &trans     &trans     &trans     &trans    &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │          │          │          │          │
-            &trans     &trans     &trans    &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
