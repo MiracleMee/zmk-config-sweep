@@ -80,35 +80,27 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp ESCAPE     &kp LC(Y)         &kp LC(Z)         &kp LC(S)                 &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &kp LEFT_SHIFT &kp LC(A)         &kp LC(C)         &kp LC(V)                &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
-        &trans         &trans               &trans               &trans                 &trans              &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
-        &trans         &trans               &trans&trans
-
-        //&kp ESCAPE     &kp LEFT_CONTROL(Y)  &kp LEFT_CONTROL(Z)  &kp LEFT_CONTROL(S)    &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        //&kp LEFT_SHIFT &kp LEFT_CONTROL(A)  &kp LEFT_CONTROL(C)  &kp LEFT_CONTROL(V)    &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
-        //&trans         &trans               &trans               &trans                 &trans              &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
-        //&trans         &trans               &trans&trans
-        //LCTRL
-
+        &kp ESCAPE     &kp LC(Y)    &kp LC(Z)       &kp LC(S)   &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+        &kp LEFT_SHIFT &kp LC(A)    &kp LC(C)       &kp LC(V)   &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        &trans         &trans       &trans          &trans      &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
+        &trans         &trans       &trans          &trans
             >;
         };
 
 
         tri_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │ PROFILE 3│          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &bt BT_SEL 3trans     &trans     &trans    &sys_reset
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │ PROFILE 4│          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &bt BT_SEL &trans     &trans     &trans    &bootloader
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
-            &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //╭─────────────────────╮╭─────────────────────╮
+        //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
+        //|boot tr  tr  tr  bt1 || bt4 tr  tr  tr  boot|
+        //| tr  tr  tr  tr  bt2 || tr  tr  tr  tr  tr  |
+        //╰─────────────────────╯╰─────────────────────╯
+        //          |  tr   tr  ||  tr   tr  |
+        //          ╰───────────┴┴───────────╯
+        
+        &sys_reset  &trans     &trans     &trans        &bt BT_SEL 0    &bt BT_SEL 3    &trans     &trans     &trans    &sys_reset
+        &bootloader &trans     &trans     &trans        &bt BT_SEL 1    &bt BT_SEL 4    &trans     &trans     &trans    &bootloader
+        &trans      &trans     &trans     &bt BT_CLR    &bt BT_SEL 2    &trans          &trans     &trans     &trans    &trans
             >;
         };
     };
