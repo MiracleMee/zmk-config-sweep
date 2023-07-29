@@ -80,8 +80,8 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp ESCAPE     &trans               &trans               &trans                 &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &kp LEFT_SHIFT &trans               &trans               &ktrans                &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        &kp ESCAPE     &kp LC(Y)         &kp LC(Z)         &kp LC(S)                 &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+        &kp LEFT_SHIFT &kp LC(A)         &kp LC(C)         &kp LC(V)                &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         &trans         &trans               &trans               &trans                 &trans              &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
         &trans         &trans               &trans&trans
 
