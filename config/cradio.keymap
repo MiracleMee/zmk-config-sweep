@@ -38,7 +38,7 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Z       │          │
-           &kp DE_Q   &kp DE_W   &kp DE_F   &kp DE_P   &kp DE_B       &kp DE_J   &kp DE_L   &kp DE_U   &kp DE_Z   &trans
+           &kp DE_Q   &kp DE_W   &kp DE_F   &kp DE_P   &kp DE_B       &kp DE_J   &kp DE_L   &kp DE_U   &kp DE_Z   &sk LEFT_SHIFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │ O        │
            &kp DE_A   &kp DE_R   &kp DE_S   &kp DE_T   &kp DE_G       &kp DE_M   &kp DE_N   &kp DE_E   &kp DE_I   &kp DE_O
@@ -46,7 +46,7 @@
         //│  Y       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,        │ .        │ /        │
            &kp DE_Y   &kp DE_X   &kp DE_C   &kp DE_D   &kp DE_V       &kp DE_K   &kp DE_H   &kp DE_COMMA &kp DE_PERIOD &kp DE_SLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &lt 3 TAB   &lt 2 ENTER     &lt 1 SPACE  &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -93,21 +93,38 @@
             >;
         };
 
-        //&trans &trans &trans &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        //&trans &trans &trans &trans &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        //&kp ESCAPE &kp LEFT_CONTROL(DE_Y) &kp LEFT_CONTROL(DE_Z) &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+        //&kp LEFT_SHIFT &trans &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         //&trans &trans &trans &trans &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
 
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
-           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &trans     &trans     &trans     &trans    &sys_reset
+        //│ RESET    │          │          │          │PROFILE 0 │   │ PROFILE 3│          │          │          │  RESET   │
+           &sys_reset  &trans     &trans     &trans    &bt BT_SEL 0    &bt BT_SEL 3     &trans     &trans     &trans    &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│BOOTLOADER│          │          │          │PROFILE 1 │   │          │          │          │          │BOOTLOADER│
-          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &trans     &trans     &trans     &trans    &bootloader
+        //│BOOTLOADER│          │          │          │PROFILE 1 │   │ PROFILE 4│          │          │          │BOOTLOADER│
+          &bootloader  &trans     &trans     &trans    &bt BT_SEL 1    &bt BT_SEL 4     &trans     &trans     &trans    &bootloader
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
+        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             &trans     &trans         &trans     &trans
+        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            >;
+        };
+
+        combo_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &trans      &trans     &trans     &trans    &trans         &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+           &kp LEFT_GUI(1)&kp LEFT_GUI(2)&kp LEFT_GUI(3)&kp LEFT_GUI(4) &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans    &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
