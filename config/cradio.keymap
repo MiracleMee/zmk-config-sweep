@@ -83,7 +83,7 @@
            &kp ESCAPE &kp LEFT_CONTROL(DE_Y) &kp LEFT_CONTROL(DE_Z) &trans &trans  &trans              &trans          &kp UARW    &trans       &kp DE_CARET
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-           &kp LEFT_SHIFT &kp LEFT_CONTROL(DE_S) &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW 
+           &kp LEFT_SHIFT &kp LEFT_CONTROL(DE_S) &kp LEFT_CONTROL(DE_C) &kp LEFT_CONTROL(DE_V) &trans  &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW &kp DE_PIPE 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
            &trans &trans &trans &trans &trans  &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
