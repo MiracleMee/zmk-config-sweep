@@ -80,8 +80,8 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp ESCAPE     &kp LEFT_CONTROL  &kp LEFT_CONTROL  &kp LEFT_CONTROL    &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &kp LEFT_SHIFT &kp LEFT_CONTROL  &kp LEFT_CONTROL  &kp LEFT_CONTROL    &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        &kp ESCAPE     &trans               &trans               &trans                 &trans              &trans              &trans          &kp UARW    &trans       &kp DE_CARET
+        &kp LEFT_SHIFT &trans               &trans               &ktrans                &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         &trans         &trans               &trans               &trans                 &trans              &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
         &trans         &trans               &trans&trans
 
@@ -89,6 +89,7 @@
         //&kp LEFT_SHIFT &kp LEFT_CONTROL(A)  &kp LEFT_CONTROL(C)  &kp LEFT_CONTROL(V)    &trans              &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         //&trans         &trans               &trans               &trans                 &trans              &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
         //&trans         &trans               &trans&trans
+        //LCTRL
 
             >;
         };
