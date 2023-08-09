@@ -55,16 +55,16 @@
         right_layer {
             bindings = <
         //╭─────────────────────╮╭─────────────────────╮
-        //| \   ""  {   }   <   ||  !   1   2   3   +  |
+        //| \   ""  {   }   <   ||  !   7   8   9   +  |
         //| #   ;   (   )   =   ||  0   4   5   6   -  |
-        //| _   ''  [   ]   >   ||  ?   7   8   9   *  |
+        //| _   ''  [   ]   >   ||  ?   1   2   3   *  |
         //╰─────────────────────╯╰─────────────────────╯
         //          |  tr  esc  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &kp DE_EXCLAMATION  &kp DE_N1   &kp DE_N2   &kp DE_N3   &kp DE_PLUS
+        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &kp DE_EXCLAMATION  &kp DE_N7   &kp DE_N8   &kp DE_N9   &kp DE_PLUS
         &kp DE_HASH         &kp DE_SEMICOLON        &kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS    &kp DE_EQUAL            &kp DE_N0           &kp DE_N4   &kp DE_N5   &kp DE_N6   &kp DE_MINUS
-        &kp DE_UNDERSCORE   &kp DE_SINGLE_QUOTE     &kp DE_LEFT_BRACKET     &kp DE_RIGHT_BRACKET        &kp DE_GREATER_THAN     &kp DE_QUESTION     &kp DE_N7   &kp DE_N8   &kp DE_N9   &kp DE_ASTERISK
+        &kp DE_UNDERSCORE   &kp DE_SINGLE_QUOTE     &kp DE_LEFT_BRACKET     &kp DE_RIGHT_BRACKET        &kp DE_GREATER_THAN     &kp DE_QUESTION     &kp DE_N1   &kp DE_N2   &kp DE_N3   &kp DE_ASTERISK
         &trans              &kp ESC                 &trans                  &trans
             >;
         };
