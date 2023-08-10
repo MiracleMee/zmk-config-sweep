@@ -1,5 +1,33 @@
-// Copyright (c) 2022 The ZMK Contributors
-// SPDX-License-Identifier: MIT
+//Robs sweep theFirst
+//╭─────────────────────╮╭─────────────────────╮
+//| Q   W   F   P   B   ||  J   L   U   Z  shft|
+//| A   R   S   T   G   ||  M   N   E   I   O  |
+//| Y   X   C   D   V   ||  K   H   ,   .   /  |
+//╰─────────────────────╯╰─────────────────────╯
+//          | tab enter || spc  bspc |
+//          ╰───────────┴┴───────────╯
+//╭─────────────────────╮╭─────────────────────╮
+//| \   ""  {   }   <   ||  !   7   8   9   +  |
+//| #   ;   (   )   =   ||  0   4   5   6   -  |
+//| _   ''  [   ]   >   ||  ?   1   2   3   *  |
+//╰─────────────────────╯╰─────────────────────╯
+//          |  tr  esc  ||  tr   tr  |
+//          ╰───────────┴┴───────────╯
+//╭─────────────────────╮╭─────────────────────╮
+//| esc ctY ctZ ctS tr  || tr  tr  up  tr   ^  |
+//| sft ctA ctC ctV  tr || @   lft dwn rght |  |
+//| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
+//╰─────────────────────╯╰─────────────────────╯
+//          |  tr   tr  ||  tr   tr  |
+//          ╰───────────┴┴───────────╯
+//╭─────────────────────╮╭─────────────────────╮
+//| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
+//|boot tr  tr  tr  bt1 || bt4 tr  tr  tr  boot|
+//| tr  tr  tr  clr bt2 || tr  tr  tr  tr  tr  |
+//╰─────────────────────╯╰─────────────────────╯
+//          |  tr   tr  ||  tr   tr  |
+//          ╰───────────┴┴───────────╯
+//
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -14,7 +42,7 @@
 
 //Macros______________________________________________________________________________________
     macros {
-        sch-macro: macro_0 {
+        schM: macro_0 {
             label = "macro_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -73,7 +101,7 @@
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp DE_S>, <&sch-macro>;
+            bindings = <&kp DE_S>, <&schM>;
         };
         
     };
