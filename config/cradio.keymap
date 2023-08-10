@@ -11,15 +11,18 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+
+//Macros______________________________________________________________________________________
     macros {
-        sch-macro: sch-macro {
-            label = "sch-macro";
+        sch-macro: macro_0 {
+            label = "macro_0";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_S &kp DE_C &kp DE_H>;
         };
     };
 
+//Behaviors___________________________________________________________________________________
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -32,6 +35,7 @@
             bindings = <&kp>, <&kp>;
         };
 
+//Tap-Dances___________________________________________________________________________________
         ae: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_0";
@@ -74,6 +78,7 @@
         
     };
 
+//Conditional Layers____________________________________________________________________________
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -82,6 +87,7 @@
         };
     };
 
+//Keymaps_______________________________________________________________________________________
     keymap {
         compatible = "zmk,keymap";
         default_layer {
