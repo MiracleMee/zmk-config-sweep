@@ -16,14 +16,10 @@
             label = "sch-macro";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&kp DE_S &kp DE_C &kp DE_H>
-                ;
+            bindings = <&kp DE_S &kp DE_C &kp DE_H>;
         };
     };
-};
 
-/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
