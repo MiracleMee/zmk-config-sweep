@@ -11,6 +11,19 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+    macros {
+        sch-macro: sch-macro {
+            label = "sch-macro";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&kp DE_S &kp DE_C &kp DE_H>
+                ;
+        };
+    };
+};
+
+/ {
     behaviors {
         ht: hold_tap {
             label = "hold_tap";
@@ -30,6 +43,39 @@
             tapping-term-ms = <200>;
             bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
         };
+
+        oe: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_1";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_O>, <&kp DE_O_UMLAUT>;
+        };
+
+        ue: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_U>, <&kp DE_U_UMLAUT>;
+        };
+
+        ss: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_Z>, <&kp DE_SHARP_S>;
+        };
+
+        sch: tap_dance_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_4";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_S>, <&sch-macro>;
+        };
+        
     };
 
     conditional_layers {
@@ -52,9 +98,9 @@
         //          | tab enter || spc  bspc |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J &kp DE_L &kp DE_U     &kp DE_Z      &sk LSHIFT
-        &ae         &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M &kp DE_N &kp DE_E     &kp DE_I      &kp DE_O
-        &kp DE_Y    &kp DE_X    &kp DE_C     &kp DE_D &kp DE_V    &kp DE_K &kp DE_H &kp DE_COMMA &kp DE_PERIOD &kp DE_SLASH
+        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J      &kp DE_L &kpue          &ss             &sk LSHIFT
+        &ae         &kp DE_R    &sch         &kp DE_T &kp DE_G    &kp DE_M      &kp DE_N &kp DE_E       &kp DE_I        &oe
+        &kp DE_Y    &kp DE_X    &kp DE_C     &kp DE_D &kp DE_V    &kp DE_K      &kp DE_H &kp DE_COMMA   &kp DE_PERIOD   &kp DE_SLASH
         &lt 3 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
             >;
         };
