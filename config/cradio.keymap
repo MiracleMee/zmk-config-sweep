@@ -22,6 +22,14 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        ae: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DE_A>, <&kp DE_A_UMLAUT>;
+        };
     };
 
     conditional_layers {
@@ -45,9 +53,9 @@
         //          ╰───────────┴┴───────────╯
 
         &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J &kp DE_L &kp DE_U     &kp DE_Z      &sk LSHIFT
-        &kp DE_A    &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M &kp DE_N &kp DE_E     &kp DE_I      &kp DE_O
+        &ae         &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M &kp DE_N &kp DE_E     &kp DE_I      &kp DE_O
         &kp DE_Y    &kp DE_X    &kp DE_C     &kp DE_D &kp DE_V    &kp DE_K &kp DE_H &kp DE_COMMA &kp DE_PERIOD &kp DE_SLASH
-        &lt 4 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
+        &lt 3 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
             >;
         };
 
@@ -104,23 +112,5 @@
         &trans      &trans     &trans     &trans
             >;
         };
-        
-        macro_layer {
-            bindings = <
-        //╭─────────────────────╮╭─────────────────────╮
-        //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
-        //|boot tr  tr  tr  bt1 || bt4 tr  tr  tr  boot|
-        //| tr  tr  tr  clr bt2 || tr  tr  tr  tr  tr  |
-        //╰─────────────────────╯╰─────────────────────╯
-        //          |  tr   tr  ||  tr   tr  |
-        //          ╰───────────┴┴───────────╯
-        
-        &trans      &trans     &trans     &trans    &trans        &trans    &trans     &trans     &trans    &trans
-        &trans      &trans     &kp F5     &trans    &trans        &trans    &trans     &trans     &trans    &trans
-        &trans      &trans     &trans     &trans    &trans        &trans    &trans     &trans     &trans    &trans
-        &trans      &trans     &trans     &trans
-            >;
-        };
-
     };
 };
