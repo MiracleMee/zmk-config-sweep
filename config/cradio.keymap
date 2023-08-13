@@ -18,7 +18,7 @@
 //| sft ctA ctC ctV  tr || @   lft dwn rght |  |
 //| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
 //╰─────────────────────╯╰─────────────────────╯
-//          |  tr   tr  ||  tr   tr  |
+//          |  tr   tr  ||  tr   tr  | 
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
 //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
@@ -47,6 +47,24 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_S &kp DE_C &kp DE_H>;
+        };
+        chM: macro_1 {
+            label = "macro_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_C &kp DE_H>;
+        };
+        gmxMailM: macro_2 {
+            label = "macro_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_R &kp DE_O &kp DE_B &kp DE_I &kp DE_N &kp DE_PERIOD &kp DE_W &kp DE_U &kp DE_N &kp DE_D &kp DE_E &kp DE_R &kp DE_L &kp DE_I &kp DE_C &kp DE_H &kp DE_AT_SIGN &kp DE_G &kp DE_M &kp DE_X &kp DE_PERIOD &kp DE_N &kp DE_E &kp DE_T>;
+        };
+        fsnwMailM: macro_3 {
+            label = "macro_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_R &kp DE_O &kp DE_B &kp DE_I &kp DE_N &kp DE_PERIOD &kp DE_W &kp DE_U &kp DE_N &kp DE_D &kp DE_E &kp DE_R &kp DE_L &kp DE_I &kp DE_C &kp DE_H &kp DE_AT_SIGN &kp DE_F &kp DE_S &kp DE_N &kp DE_W &kp DE_PERIOD &kp DE_D &kp DE_E>;
         };
     };
 
@@ -128,10 +146,10 @@
         //          | tab enter || spc  bspc |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J      &kp DE_L    &ue            &ss             &sk LSHIFT
-        &ae         &kp DE_R    &sch         &kp DE_T &kp DE_G    &kp DE_M      &kp DE_N    &kp DE_E       &kp DE_I        &oe
+        &kp DE_Q    &kp DE_W    &kp DE_F     &kp DE_P &kp DE_B    &kp DE_J      &kp DE_L    &kp DE_U       &kp DE_Z        &sk LSHIFT
+        &kp DE_A    &kp DE_R    &kp DE_S     &kp DE_T &kp DE_G    &kp DE_M      &kp DE_N    &kp DE_E       &kp DE_I        &kp DE_O
         &kp DE_Y    &kp DE_X    &kp DE_C     &kp DE_D &kp DE_V    &kp DE_K      &kp DE_H    &kp DE_COMMA   &kp DE_PERIOD   &kp DE_SLASH
-        &lt 3 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
+        &lt 4 TAB   &lt 2 ENTER &lt 1 SPACE  &kp BSPC
             >;
         };
 
@@ -161,13 +179,13 @@
         //| sft ctA ctC ctV  tr || @   lft dwn rght |  |
         //| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
         //╰─────────────────────╯╰─────────────────────╯
-        //          |  tr   tr  ||  tr   tr  |
+        //          |  tr   tr  || shft  win |
         //          ╰───────────┴┴───────────╯
 
         &kp ESCAPE     &kp LC(DE_Y)    &kp LC(DE_Z)       &kp LC(DE_S)   &trans        &trans              &trans          &kp UARW    &trans       &kp DE_CARET
         &sk LSHIFT     &kp LC(DE_A)    &kp LC(DE_C)       &kp LC(DE_V)   &trans        &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         &trans         &trans          &trans             &trans         &trans        &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
-        &trans         &trans          &trans             &trans
+        &trans         &trans          &sk LSHIFT         &sk LWIN
             >;
         };
 
@@ -185,6 +203,23 @@
         &sys_reset  &trans     &trans     &trans        &bt BT_SEL 0          &bt BT_SEL 3    &trans     &trans     &trans    &sys_reset
         &bootloader &trans     &trans     &trans        &bt BT_SEL 1          &bt BT_SEL 4    &trans     &trans     &trans    &bootloader
         &trans      &trans     &trans     &bt BT_CLR    &bt BT_SEL 2          &trans          &trans     &trans     &trans    &trans
+        &trans      &trans     &trans     &trans
+            >;
+        };
+
+        misc_layer {
+            bindings = <
+        //╭─────────────────────╮╭─────────────────────╮
+        //| tr  tr  tr  tr  tr  || tr  tr  tr  tr  tr  |
+        //| ch  sch tr gmx fsnw || tr  ä   ö   ü   ß   |
+        //| tr  tr  tr  tr  tr  || tr  tr  tr  tr  tr  |
+        //╰─────────────────────╯╰─────────────────────╯
+        //          |  tr   tr  ||  tr   tr  |
+        //          ╰───────────┴┴───────────╯
+        
+        &trans      &trans     &trans     &trans        &trans          &trans    &trans              &trans            &trans             &trans
+        &chM        &schM      &gmxMailM  &fsnwMailM    &trans          &trans    &kp DE_A_UMLAUT     &kp DE_O_UMLAUT   &kp DE_U_UMLAUT    &kp DE_SHARP_S
+        &trans      &trans     &trans     &trans        &trans          &trans    &trans              &trans            &trans             &trans
         &trans      &trans     &trans     &trans
             >;
         };
