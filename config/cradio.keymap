@@ -15,10 +15,10 @@
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
 //| esc ctY ctZ ctS tr  || tr  tr  up  tr   ^  |
-//| sft ctA ctC ctV  tr || @   lft dwn rght |  |
+//| sft ctA ctC ctV stlt|| @   lft dwn rght |  |
 //| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
 //╰─────────────────────╯╰─────────────────────╯
-//          |  tr   tr  ||  tr   tr  | 
+//          |  tr   tr  || shft  win |
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
 //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
@@ -28,6 +28,13 @@
 //          |  tr   tr  ||  tr   tr  |
 //          ╰───────────┴┴───────────╯
 //
+//╭─────────────────────╮╭─────────────────────╮
+//| tr  tr  tr  tr  tr  || tr  tr  tr  tr  tr  |
+//| ch  sch tr gmx fsnw || tr  ä   ö   ü   ß   |
+//| tr  tr  tr  tr  tr  || tr  tr  tr  tr  tr  |
+//╰─────────────────────╯╰─────────────────────╯
+//          |  tr   tr  ||  tr   tr  |
+//          ╰───────────┴┴───────────╯
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -176,14 +183,14 @@
             bindings = <
         //╭─────────────────────╮╭─────────────────────╮
         //| esc ctY ctZ ctS tr  || tr  tr  up  tr   ^  |
-        //| sft ctA ctC ctV  tr || @   lft dwn rght |  |
+        //| sft ctA ctC ctV stlt|| @   lft dwn rght |  |
         //| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
         //╰─────────────────────╯╰─────────────────────╯
         //          |  tr   tr  || shft  win |
         //          ╰───────────┴┴───────────╯
 
         &kp ESCAPE     &kp LC(DE_Y)    &kp LC(DE_Z)       &kp LC(DE_S)   &trans        &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &sk LSHIFT     &kp LC(DE_A)    &kp LC(DE_C)       &kp LC(DE_V)   &trans        &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
+        &sk LSHIFT     &kp LC(DE_A)    &kp LC(DE_C)       &kp LC(DE_V)   &kp LC(LALT)        &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
         &trans         &trans          &trans             &trans         &trans        &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
         &trans         &trans          &sk LSHIFT         &sk LWIN
             >;
