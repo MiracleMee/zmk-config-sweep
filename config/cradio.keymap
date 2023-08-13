@@ -7,16 +7,16 @@
 //          | tab enter || spc  bspc |
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
-//| \   ""  {   }   <   ||  !   7   8   9   +  |
-//| #   ;   (   )   =   ||  0   4   5   6   -  |
-//| _   ''  [   ]   >   ||  ?   1   2   3   *  |
+//| \   ""  {   }   <   || tr  tr  up  tr   ^  |
+//| #   ;   (   )   =   || @   lft dwn rght |  |
+//| _   ''  [   ]   >   || &    $   €   ~   %  |
 //╰─────────────────────╯╰─────────────────────╯
 //          |  tr  esc  ||  tr   tr  |
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
-//| esc ctY ctZ ctS tr  || tr  tr  up  tr   ^  |
-//| sft ctA ctC ctV stlt|| @   lft dwn rght |  |
-//| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
+//| esc ctY ctZ ctS tr  ||  !   7   8   9   +  |
+//| sft ctA ctC ctV stlt||  0   4   5   6   -  |
+//| tr  tr  tr  tr  tr  ||  ?   1   2   3   *  |
 //╰─────────────────────╯╰─────────────────────╯
 //          |  tr   tr  || shft  win |
 //          ╰───────────┴┴───────────╯
@@ -27,7 +27,6 @@
 //╰─────────────────────╯╰─────────────────────╯
 //          |  tr   tr  ||  tr   tr  |
 //          ╰───────────┴┴───────────╯
-//
 //╭─────────────────────╮╭─────────────────────╮
 //| tr  tr  tr  tr  tr  || tr  tr  tr  tr  tr  |
 //| ch  sch tr gmx fsnw || tr  ä   ö   ü   ß   |
@@ -56,19 +55,19 @@
             bindings = <&kp DE_S &kp DE_C &kp DE_H>;
         };
         chM: macro_1 {
-            label = "macro_0";
+            label = "macro_1";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_C &kp DE_H>;
         };
         gmxMailM: macro_2 {
-            label = "macro_0";
+            label = "macro_2";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_R &kp DE_O &kp DE_B &kp DE_I &kp DE_N &kp DE_PERIOD &kp DE_W &kp DE_U &kp DE_N &kp DE_D &kp DE_E &kp DE_R &kp DE_L &kp DE_I &kp DE_C &kp DE_H &kp DE_AT_SIGN &kp DE_G &kp DE_M &kp DE_X &kp DE_PERIOD &kp DE_N &kp DE_E &kp DE_T>;
         };
         fsnwMailM: macro_3 {
-            label = "macro_0";
+            label = "macro_3";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp DE_R &kp DE_O &kp DE_B &kp DE_I &kp DE_N &kp DE_PERIOD &kp DE_W &kp DE_U &kp DE_N &kp DE_D &kp DE_E &kp DE_R &kp DE_L &kp DE_I &kp DE_C &kp DE_H &kp DE_AT_SIGN &kp DE_F &kp DE_S &kp DE_N &kp DE_W &kp DE_PERIOD &kp DE_D &kp DE_E>;
@@ -164,16 +163,16 @@
         right_layer {
             bindings = <
         //╭─────────────────────╮╭─────────────────────╮
-        //| \   ""  {   }   <   ||  !   7   8   9   +  |
-        //| #   ;   (   )   =   ||  0   4   5   6   -  |
-        //| _   ''  [   ]   >   ||  ?   1   2   3   *  |
+        //| \   ""  {   }   <   || tr  tr  up  tr   ^  |
+        //| #   ;   (   )   =   || @   lft dwn rght |  |
+        //| _   ''  [   ]   >   || &    $   €   ~   %  |
         //╰─────────────────────╯╰─────────────────────╯
         //          |  tr  esc  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &kp DE_EXCLAMATION  &kp DE_N7   &kp DE_N8   &kp DE_N9   &kp DE_PLUS
-        &kp DE_HASH         &kp DE_SEMICOLON        &kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS    &kp DE_EQUAL            &kp DE_N0           &kp DE_N4   &kp DE_N5   &kp DE_N6   &kp DE_MINUS
-        &kp DE_UNDERSCORE   &kp DE_SINGLE_QUOTE     &kp DE_LEFT_BRACKET     &kp DE_RIGHT_BRACKET        &kp DE_GREATER_THAN     &kp DE_QUESTION     &kp DE_N1   &kp DE_N2   &kp DE_N3   &kp DE_ASTERISK
+        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &trans              &trans          &kp UARW     &trans       &kp DE_CARET
+        &kp DE_HASH         &kp DE_SEMICOLON        &kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS    &kp DE_EQUAL            &kp DE_AT_SIGN      &kp LARW        &kp DARW     &kp RARW     &kp DE_PIPE
+        &kp DE_UNDERSCORE   &kp DE_SINGLE_QUOTE     &kp DE_LEFT_BRACKET     &kp DE_RIGHT_BRACKET        &kp DE_GREATER_THAN     &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO  &kp DE_TILDE &kp DE_PERCENT
         &trans              &kp ESC                 &trans                  &trans
             >;
         };
@@ -182,16 +181,16 @@
         left_layer {
             bindings = <
         //╭─────────────────────╮╭─────────────────────╮
-        //| esc ctY ctZ ctS tr  || tr  tr  up  tr   ^  |
-        //| sft ctA ctC ctV stlt|| @   lft dwn rght |  |
-        //| tr  tr  tr  tr  tr  || &    $   €   ~   %  |
+        //| esc ctY ctZ ctS tr  ||  !   7   8   9   +  |
+        //| sft ctA ctC ctV stlt||  0   4   5   6   -  |
+        //| tr  tr  tr  tr  tr  ||  ?   1   2   3   *  |
         //╰─────────────────────╯╰─────────────────────╯
         //          |  tr   tr  || shft  win |
         //          ╰───────────┴┴───────────╯
 
-        &kp ESCAPE     &kp LC(DE_Y)    &kp LC(DE_Z)       &kp LC(DE_S)   &trans        &trans              &trans          &kp UARW    &trans       &kp DE_CARET
-        &sk LSHIFT     &kp LC(DE_A)    &kp LC(DE_C)       &kp LC(DE_V)   &kp LC(LALT)        &kp DE_AT_SIGN      &kp LARW        &kp DARW    &kp RARW     &kp DE_PIPE
-        &trans         &trans          &trans             &trans         &trans        &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO &kp DE_TILDE &kp DE_PERCENT
+        &kp ESCAPE     &kp LC(DE_Y)    &kp LC(DE_Z)       &kp LC(DE_S)   &trans              &kp DE_EXCLAMATION  &kp DE_N7   &kp DE_N8   &kp DE_N9   &kp DE_PLUS
+        &sk LSHIFT     &kp LC(DE_A)    &kp LC(DE_C)       &kp LC(DE_V)   &kp LC(LALT)        &kp DE_N0           &kp DE_N4   &kp DE_N5   &kp DE_N6   &kp DE_MINUS
+        &trans         &trans          &trans             &trans         &trans              &kp DE_QUESTION     &kp DE_N1   &kp DE_N2   &kp DE_N3   &kp DE_ASTERISK
         &trans         &trans          &sk LSHIFT         &sk LWIN
             >;
         };
