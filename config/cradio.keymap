@@ -170,7 +170,7 @@
         //          |  tr  esc  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
 
-        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &kp E_COLON         &E_COLON        &kp UARW     &trans       &kp DE_CARET
+        &kp DE_BACKSLASH    &kp DE_DOUBLE_QUOTES    &kp DE_LEFT_BRACE       &kp DE_RIGHT_BRACE          &kp DE_LESS_THAN        &kp E_COLON         &kp E_COLON        &kp UARW     &trans       &kp DE_CARET
         &kp DE_HASH         &kp DE_SEMICOLON        &kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS    &kp DE_EQUAL            &kp DE_AT_SIGN      &kp LARW        &kp DARW     &kp RARW     &kp DE_PIPE
         &kp DE_UNDERSCORE   &kp DE_SINGLE_QUOTE     &kp DE_LEFT_BRACKET     &kp DE_RIGHT_BRACKET        &kp DE_GREATER_THAN     &kp DE_AMPERSAND    &kp DE_DOLLAR   &kp DE_EURO  &kp DE_TILDE &kp DE_PERCENT
         &trans              &kp ESC                 &trans                  &trans
