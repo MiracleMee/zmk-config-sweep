@@ -199,17 +199,17 @@
         tri_layer {
             bindings = <
         //╭─────────────────────╮╭─────────────────────╮
-        //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
-        //|boot tr  e   tr  bt1 || bt4 tr  e   tr  boot|
-        //| tr  tr  tr  clr bt2 || tr  tr  tr  tr  tr  |
+        //| rst tr  tr  bt3  bt0|| bt0 bt3  tr tr  rst |
+        //|boot tr  !   bt4  bt1|| bt1 bt4  !  tr  boot|
+        //| tr  tr  tr  clr  bt2|| bt2 clr  tr tr  tr  |
         //╰─────────────────────╯╰─────────────────────╯
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
         
-        &sys_reset  &trans     &trans     &trans        &bt BT_SEL 0          &bt BT_SEL 3    &trans     &trans     &trans    &sys_reset
-        &bootloader &trans     &kp DE_E   &trans        &bt BT_SEL 1          &bt BT_SEL 4    &trans     &kp DE_E   &trans    &bootloader
-        &trans      &trans     &trans     &bt BT_CLR    &bt BT_SEL 2          &trans          &trans     &trans     &trans    &trans
-        &trans      &trans     &trans     &trans
+        &sys_reset  &trans     &trans                 &bt BT_SEL 3  &bt BT_SEL 0      &bt BT_SEL 0    &bt BT_SEL 3     &trans               &trans    &sys_reset
+        &bootloader &trans     &kp DE_EXCLAMATION     &bt BT_SEL 4  &bt BT_SEL 1      &bt BT_SEL 1    &bt BT_SEL 4     &kp DE_EXCLAMATION   &trans    &bootloader
+        &trans      &trans     &trans                 &bt BT_CLR    &bt BT_SEL 2      &bt BT_SEL 2    &bt BT_CLR       &trans               &trans    &trans
+        &trans      &trans     &trans                 &trans
             >;
         };
 
