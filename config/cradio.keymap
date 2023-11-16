@@ -223,10 +223,10 @@
         //          |  tr   tr  ||  tr   tr  |
         //          ╰───────────┴┴───────────╯
         
-        &trans      &trans     &trans     &trans        &trans          &trans    &trans              &trans            &trans             &trans
-        &chM        &schM      &trans  &trans    &trans          &trans    &kp DE_A_UMLAUT     &kp DE_O_UMLAUT   &kp DE_U_UMLAUT    &kp DE_SHARP_S
-        &trans      &trans     &trans     &trans        &trans          &trans    &trans              &trans            &trans             &trans
-        &trans      &trans     &trans     &trans
+        &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &trans          &trans    &trans              &trans            &trans             &trans
+        &chM         &schM        &trans       &trans        &trans          &trans    &kp DE_A_UMLAUT     &kp DE_O_UMLAUT   &kp DE_U_UMLAUT    &kp DE_SHARP_S
+        &bootloader       &sys_reset       &trans       &bt BT_CLR    &trans          &trans    &trans              &trans            &sys_reset             &bootloader
+        &trans       &trans       &trans       &trans
             >;
         };
     };
