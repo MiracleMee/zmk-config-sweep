@@ -22,7 +22,7 @@
 //          ╰───────────┴┴───────────╯
 //╭─────────────────────╮╭─────────────────────╮
 //| rst tr  tr  tr  bt0 || bt3 tr  tr  tr  rst |
-//|boot tr  tr  tr  bt1 || bt4 tr  tr  tr  boot|
+//|boot tr  e   tr  bt1 || bt4 tr  e   tr  boot|
 //| tr  tr  tr  clr bt2 || tr  tr  tr  tr  tr  |
 //╰─────────────────────╯╰─────────────────────╯
 //          |  tr   tr  ||  tr   tr  |
@@ -134,7 +134,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <1 4>;
             then-layer = <3>;
         };
     };
